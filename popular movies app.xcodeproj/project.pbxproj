@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		A51DBA2E21EAD6FF00A0F4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51DBA2D21EAD6FF00A0F4D2 /* AppDelegate.swift */; };
-		A51DBA3021EAD6FF00A0F4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51DBA2F21EAD6FF00A0F4D2 /* ViewController.swift */; };
 		A51DBA3321EAD6FF00A0F4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51DBA3121EAD6FF00A0F4D2 /* Main.storyboard */; };
 		A51DBA3521EAD70100A0F4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51DBA3421EAD70100A0F4D2 /* Assets.xcassets */; };
 		A51DBA3821EAD70100A0F4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51DBA3621EAD70100A0F4D2 /* LaunchScreen.storyboard */; };
+		A51DBA4021EAD77300A0F4D2 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51DBA3F21EAD77300A0F4D2 /* MoviesTableViewController.swift */; };
+		A51DBA4321EAD7B600A0F4D2 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51DBA4221EAD7B600A0F4D2 /* MovieTableViewCell.swift */; };
+		A51DBA4521EAD7CC00A0F4D2 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51DBA4421EAD7CC00A0F4D2 /* MovieCollectionViewCell.swift */; };
+		A51DBA4921ED199900A0F4D2 /* MovieConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = A51DBA4821ED199900A0F4D2 /* MovieConfiguration.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A51DBA2A21EAD6FF00A0F4D2 /* popular movies app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "popular movies app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51DBA2D21EAD6FF00A0F4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A51DBA2F21EAD6FF00A0F4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A51DBA3221EAD6FF00A0F4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A51DBA3421EAD70100A0F4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A51DBA3721EAD70100A0F4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51DBA3921EAD70100A0F4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51DBA3F21EAD77300A0F4D2 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		A51DBA4221EAD7B600A0F4D2 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		A51DBA4421EAD7CC00A0F4D2 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		A51DBA4821ED199900A0F4D2 /* MovieConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MovieConfiguration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				A51DBA2C21EAD6FF00A0F4D2 /* popular movies app */,
+				A51DBA4721ED196A00A0F4D2 /* Supporting */,
 				A51DBA2B21EAD6FF00A0F4D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,14 +61,40 @@
 		A51DBA2C21EAD6FF00A0F4D2 /* popular movies app */ = {
 			isa = PBXGroup;
 			children = (
+				A51DBA4621ECFCC400A0F4D2 /* Networking */,
 				A51DBA2D21EAD6FF00A0F4D2 /* AppDelegate.swift */,
-				A51DBA2F21EAD6FF00A0F4D2 /* ViewController.swift */,
 				A51DBA3121EAD6FF00A0F4D2 /* Main.storyboard */,
-				A51DBA3421EAD70100A0F4D2 /* Assets.xcassets */,
+				A51DBA4121EAD77700A0F4D2 /* Controllers */,
 				A51DBA3621EAD70100A0F4D2 /* LaunchScreen.storyboard */,
 				A51DBA3921EAD70100A0F4D2 /* Info.plist */,
 			);
 			path = "popular movies app";
+			sourceTree = "<group>";
+		};
+		A51DBA4121EAD77700A0F4D2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A51DBA3F21EAD77300A0F4D2 /* MoviesTableViewController.swift */,
+				A51DBA4221EAD7B600A0F4D2 /* MovieTableViewCell.swift */,
+				A51DBA4421EAD7CC00A0F4D2 /* MovieCollectionViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A51DBA4621ECFCC400A0F4D2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A51DBA4721ED196A00A0F4D2 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				A51DBA3421EAD70100A0F4D2 /* Assets.xcassets */,
+				A51DBA4821ED199900A0F4D2 /* MovieConfiguration.plist */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +157,7 @@
 			files = (
 				A51DBA3821EAD70100A0F4D2 /* LaunchScreen.storyboard in Resources */,
 				A51DBA3521EAD70100A0F4D2 /* Assets.xcassets in Resources */,
+				A51DBA4921ED199900A0F4D2 /* MovieConfiguration.plist in Resources */,
 				A51DBA3321EAD6FF00A0F4D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51DBA3021EAD6FF00A0F4D2 /* ViewController.swift in Sources */,
+				A51DBA4021EAD77300A0F4D2 /* MoviesTableViewController.swift in Sources */,
 				A51DBA2E21EAD6FF00A0F4D2 /* AppDelegate.swift in Sources */,
+				A51DBA4321EAD7B600A0F4D2 /* MovieTableViewCell.swift in Sources */,
+				A51DBA4521EAD7CC00A0F4D2 /* MovieCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
