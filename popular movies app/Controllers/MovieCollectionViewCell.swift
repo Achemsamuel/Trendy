@@ -10,4 +10,6 @@ import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
+    
+    
 }

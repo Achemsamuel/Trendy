@@ -1,0 +1,16 @@
+PODS:
+  - Kingfisher (5.0.1)
+
+DEPENDENCIES:
+  - Kingfisher (~> 5.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+
+PODFILE CHECKSUM: a392e0a8d01f5b6f84cc0b4fb236cc115553f880
+
+COCOAPODS: 1.5.3
