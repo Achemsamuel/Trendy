@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MoviesTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -24,7 +25,9 @@ class MoviesTableViewController: UITableViewController, UICollectionViewDataSour
     var baseUrl : String!
     var posterWidth = "w154"
     var moviesResult = MovieResult()
-    let finalMovieUrl : String = ""
+    var finalMovieUrl : String = ""
+    let imagesUrl = "image.tmdb.org/t/p/"
+    var movieTitle : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,9 +68,12 @@ class MoviesTableViewController: UITableViewController, UICollectionViewDataSour
                     print("Poster Path: \(movieItem.posterPath)")
                     
                     //Final URl
-                    var finalUrl = self.baseUrl+self.posterWidth+movieItem.posterPath
-                    finalUrl = self.finalMovieUrl
-                    print("Final Url\(finalUrl)")
+                    self.finalMovieUrl = ("https://\(self.imagesUrl)\(self.posterWidth)\(movieItem.posterPath)")
+                    
+                    print("Final Movie Url: \(self.finalMovieUrl)")
+                    
+                    self.movieTitle = movieItem.movieTitle
+                    print("Movie Titiles: \(self.movieTitle)")
                     
                 })
                 
@@ -79,6 +85,7 @@ class MoviesTableViewController: UITableViewController, UICollectionViewDataSour
         
         }
         
+        tableView.reloadData()
         
     }
 
@@ -108,15 +115,29 @@ class MoviesTableViewController: UITableViewController, UICollectionViewDataSour
     }
 
     //MARK: Collection View Datasource
+    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return moviesResult.movieArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellIdentifier, for: indexPath) as! MovieCollectionViewCell
         
+        let movieItem = moviesResult.movieArray[indexPath.row]
+//        cell.movieLabel.text = movieItem.movieTitle
+        
+        let posterItem = ("https://\(self.imagesUrl)\(self.posterWidth)\(movieItem.posterPath)")
+        
+        print("Poster Item: \(posterItem)")
+     
+        cell.image.kf.setImage(with: URL(string: posterItem))
+        
+        
+        
         return cell
+        
+       
     }
     
 

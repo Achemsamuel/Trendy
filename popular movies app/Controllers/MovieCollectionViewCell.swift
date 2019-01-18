@@ -10,6 +10,8 @@ import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var image: UIImageView!
     
+    @IBOutlet var movieLabel: UILabel!
     
 }

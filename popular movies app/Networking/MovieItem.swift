@@ -15,4 +15,13 @@ class MovieItem : NSObject {
     var releaseDate = ""
     var posterPath = ""
     
+//    override init(posterPath) {
+//        posterPath = posterPath
+//    }
+    
+//    override init(json: JSON) {
+//        <#code#>
+//    }
+    
 }
+

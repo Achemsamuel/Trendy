@@ -7,5 +7,6 @@ target 'popular movies app' do
 
   # Pods for popular movies app
 	pod 'Kingfisher', '~> 5.0' 
+	pod 'SwiftyJSON', '~> 4.0'
 
 end
