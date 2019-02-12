@@ -14,5 +14,11 @@ class MovieResult : NSObject {
     var totalPages = 0
     var totalResults = 0
     var movieArray = Array<MovieItem>()
+    var topMovieArray = Array<MovieItem>()
+    var popularMovieArray = Array<MovieItem>()
+    var trendingMoviesArray = Array<MovieItem>()
+    var liveTVArray = Array<MovieItem>()
+    var topRatedTVArray = Array<MovieItem>()
+    
     
 }
